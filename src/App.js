@@ -1,18 +1,21 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
-import ProductCard from './components/ProductCard';
+import CountryCard from './components/CountryCard';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './Layout';
+import HomePage from './pages/HomePage';
+import CountryDetails from './pages/CountryDetails';
 const App = () => {
   return (
-    <div className="">
-      <header>
-        <Navbar />
-        <Searchbar />
-      </header>
-      <main>
-        <ProductCard />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/:id" element={<CountryDetails />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default App;

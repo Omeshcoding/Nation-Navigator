@@ -5,7 +5,7 @@ const Searchbar = () => {
     <div className=" md:flex row justify-between items-center mx-14 my-16 ">
       <div className="relative shadow-md mb-8">
         <input
-          className="block w-72 h-14 appearance-none bg-white py-4  pl-8 pr-12 text-base text-dark-gray placeholder:text-slate-600 focus:outline-none sm:text-sm sm:leading-6"
+          className="block w-[90vw] md:w-[30vw] h-14 appearance-none bg-white py-4  px-10 pl-12  text-dark-gray placeholder:text-slate-600 focus:outline-none text-sm leading-6"
           placeholder="Search for a country..."
           style={{ caretColor: 'gray' }}
         />

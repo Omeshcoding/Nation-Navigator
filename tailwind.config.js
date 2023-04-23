@@ -11,6 +11,11 @@ module.exports = {
         'light-gray': '#fafafa',
         white: '#ffffff',
       },
+      boxShadow: {
+        '4xl': '1px 0px 24px -8px rgba(40,37,37,0.75)',
+        '-webkit': '-4px -5px 47px -8px rgba(0,0,0,0.75)',
+        '-moz-box-shadow': ' -4px -5px 47px -8px rgba(0,0,0,0.75)',
+      },
     },
   },
   plugins: [],
