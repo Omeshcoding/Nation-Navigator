@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsMoon, BsSunFill } from 'react-icons/bs';
+import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 const Navbar = ({ handleDarkMode, darkMode }) => {
   const [showIcon, setShowIcon] = useState(true);
@@ -15,11 +15,11 @@ const Navbar = ({ handleDarkMode, darkMode }) => {
       >
         {darkMode === 'dark' ? (
           <span className="text-sm flex items-center gap-2 font-medium">
-            <BsSunFill /> Light Mode
+            <BsMoonFill /> Dark Mode
           </span>
         ) : (
           <span className="text-sm flex items-center gap-2 font-medium">
-            <BsMoon /> Dark Mode
+            <BsSunFill /> Light Mode
           </span>
         )}
       </button>
