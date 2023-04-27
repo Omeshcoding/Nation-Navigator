@@ -3,7 +3,6 @@ import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 const Navbar = ({ handleDarkMode, darkMode }) => {
   const [showIcon, setShowIcon] = useState(true);
-  console.log(darkMode);
   return (
     <nav className="flex justify-between px-4 md:px-14 py-6 bg-white text-Very-Dark-Blue dark:bg-dark-blue dark:text-white drop-shadow-lg">
       <Link to="/" className="text-Dark-Blue font-bold text-2xl">

@@ -3,6 +3,13 @@ import India from '../India.png';
 import { BsArrowLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 const CountryDetails = () => {
+  {
+    /* const nativeName = country.name.nativeName.eng;
+            const subRegion = country.subregion;
+            const borders = country.borders;
+            const currencies = country.currencies;
+            const languages = data.languages; */
+  }
   return (
     <article className="mx-4 lg:ml-14 ">
       <Link

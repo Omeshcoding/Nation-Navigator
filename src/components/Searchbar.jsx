@@ -1,8 +1,6 @@
 import React from 'react';
 import Filter from './Filter';
 const Searchbar = ({ onSearch, value, handleSearch }) => {
-  // console.log(onSearch, value);
-
   return (
     <div className=" md:flex row justify-between items-center mx-14 my-16 ">
       <form className="relative shadow-md mb-8 top-4" onSubmit={onSearch}>
