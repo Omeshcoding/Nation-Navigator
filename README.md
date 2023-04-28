@@ -1,2 +1,2 @@
 # Nation Navigator
-### [Live Link] (https://nation-navigator.netlify.app/)
+### [Live Link](https://nation-navigator.netlify.app/)
