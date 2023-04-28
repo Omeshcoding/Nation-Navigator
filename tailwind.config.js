@@ -17,6 +17,9 @@ module.exports = {
         '-webkit': '-4px -5px 47px -8px rgba(0,0,0,0.75)',
         '-moz-box-shadow': ' -4px -5px 47px -8px rgba(0,0,0,0.75)',
       },
+      fontFamily: {
+        'nunito-sans': ['Nunito Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],

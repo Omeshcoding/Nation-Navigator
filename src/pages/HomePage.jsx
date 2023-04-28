@@ -22,7 +22,6 @@ const HomePage = () => {
       .get('https://restcountries.com/v3.1/all')
       .then((response) => setCountries(response.data));
   }, []);
-  console.log(1, countries);
   return (
     <div>
       <Searchbar
@@ -30,7 +29,7 @@ const HomePage = () => {
         value={value}
         handleSearch={handleSearch}
       />
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center lg:justify-normal font-nunito-sans">
         {!value
           ? countries.map((country) => {
               const id = country.cca3;
@@ -44,6 +43,7 @@ const HomePage = () => {
               return (
                 <CountryCard
                   key={id}
+                  id={id}
                   countryName={countryName}
                   image={image}
                   alt={alt}
@@ -66,6 +66,7 @@ const HomePage = () => {
               return (
                 <CountryCard
                   key={id}
+                  id={id}
                   countryName={countryName}
                   image={image}
                   alt={alt}
