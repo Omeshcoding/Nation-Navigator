@@ -18,7 +18,7 @@ const Filter = ({ filters, filterRegion }) => {
       </div>
       {show && (
         <div
-          className="absolute top-20 py-3 pl-6 pr-24  flex flex-col bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg text-left 
+          className="highlight absolute top-20 py-3 pl-6 pr-24  flex flex-col bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg text-left 
        transition-all  duration-600 ease-in-out "
         >
           {filters.map((filter, index) => {
