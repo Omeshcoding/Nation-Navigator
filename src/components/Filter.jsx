@@ -9,7 +9,6 @@ const Filter = ({ filters, filterRegion }) => {
     <div className="relative flex flex-col focus:outline-none  py-4 px-3 cursor-pointer ">
       <div className="mb-4">
         <button
-          value=""
           className="flex items-center gap-3 py-3 px-5 bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg"
           onClick={handleClick}
         >
