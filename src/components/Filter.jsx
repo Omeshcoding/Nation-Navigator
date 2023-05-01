@@ -1,33 +1,40 @@
 import React, { useState } from 'react';
-
-const Filter = ({ filters, handleClick }) => {
+import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
+const Filter = ({ filters, filterRegion }) => {
+  const [show, setShow] = useState(false);
+  const handleClick = () => {
+    setShow(!show);
+  };
   return (
-    <div
-      name="Filter by Region"
-      placeholder="Filter"
-      className="flex flex-col focus:outline-none  py-4 px-3 cursor-pointer "
-    >
-      <div className="mb-10">
+    <div className="relative flex flex-col focus:outline-none  py-4 px-3 cursor-pointer ">
+      <div className="mb-4">
         <button
           value=""
-          className=" bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg"
+          className="flex items-center gap-3 py-3 px-5 bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg"
+          onClick={handleClick}
         >
           Filter By Region
+          {!show ? <BsChevronDown /> : <BsChevronUp />}
         </button>
       </div>
-      <div className="flex flex-col bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg">
-        {filters.map((filter, index) => {
-          return (
-            <button
-              key={index}
-              className="drop-shadow-md p-4 mt-10"
-              onClick={() => handleClick(filter)}
-            >
-              {filter}
-            </button>
-          );
-        })}
-      </div>
+      {show && (
+        <div
+          className="absolute top-20 py-3 pl-6 pr-24  flex flex-col bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg text-left 
+       transition-all  duration-600 ease-in-out "
+        >
+          {filters.map((filter, index) => {
+            return (
+              <button
+                key={index}
+                className="drop-shadow-md py-1 px-0 hr text-left "
+                onClick={() => filterRegion(filter)}
+              >
+                {filter}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

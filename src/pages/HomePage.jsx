@@ -7,7 +7,6 @@ const HomePage = () => {
   const [value, setValue] = useState('');
   const [countries, setCountries] = useState([]);
   const [filters, setFilters] = useState([
-    'Filter By Region',
     'All',
     'Asia',
     'Africa',
@@ -29,7 +28,7 @@ const HomePage = () => {
     }
   });
 
-  const handleClick = (str) => {
+  const filterRegion = (str) => {
     const filterByContinent = countries.filter(
       (country) => country.region === str
     );
@@ -54,7 +53,7 @@ const HomePage = () => {
           handleSearch={handleSearch}
         />
 
-        <Filter filters={filters} handleClick={handleClick} />
+        <Filter filters={filters} filterRegion={filterRegion} />
       </div>
       <div className="flex flex-wrap justify-center lg:justify-normal font-nunito-sans">
         {filterstore.length !== 0
