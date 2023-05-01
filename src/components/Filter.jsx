@@ -1,32 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Filter = () => {
+const Filter = ({ filters, handleClick }) => {
   return (
-    <div>
-      <select
-        name="Filter by Region"
-        placeholder="Filter"
-        className="focus:outline-none shadow-lg py-4 px-3 cursor-pointer bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white "
-      >
-        <option value="" className="drop-shadow-md p-4">
-          Filter by Region
-        </option>
-        <option value="filter" className=" focus:outline-none">
-          Africa{' '}
-        </option>
-        <option value="filter" className=" focus:outline-none">
-          America{' '}
-        </option>
-        <option value="filter" className=" focus:outline-none">
-          Asia{' '}
-        </option>
-        <option value="filter" className=" focus:outline-none">
-          Europe{' '}
-        </option>
-        <option value="filter" className=" focus:outline-none">
-          Oceania
-        </option>
-      </select>
+    <div
+      name="Filter by Region"
+      placeholder="Filter"
+      className="flex flex-col focus:outline-none  py-4 px-3 cursor-pointer "
+    >
+      <div className="mb-10">
+        <button
+          value=""
+          className=" bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg"
+        >
+          Filter By Region
+        </button>
+      </div>
+      <div className="flex flex-col bg-light-gray focus:bg-zinc-100 dark:bg-dark-blue text-very-dark-blue rounded-sm dark:text-white shadow-lg">
+        {filters.map((filter, index) => {
+          return (
+            <button
+              key={index}
+              className="drop-shadow-md p-4 mt-10"
+              onClick={() => handleClick(filter)}
+            >
+              {filter}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

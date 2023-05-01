@@ -23,7 +23,6 @@ const CountryDetails = () => {
         <BsArrowLeft /> Back
       </Link>
       {country.map((singleCountry) => {
-        console.log(singleCountry.name.common);
         const id = singleCountry.cca3;
         const image = singleCountry.flags.png;
         const countryName = singleCountry.name.common;
@@ -97,9 +96,12 @@ const CountryDetails = () => {
                 <div className="flex flex-wrap items-center gap-5 mt-14 lg:mt-24">
                   Border Countries:
                   {borders &&
-                    borders.map((border) => {
+                    borders.map((border, index) => {
                       return (
-                        <span className="px-6 py-1 bg-light-gray dark: shadow-4xl text-dark-gray rounded-sm">
+                        <span
+                          key={index}
+                          className="px-6 py-1 bg-light-gray dark: shadow-4xl text-dark-gray rounded-sm"
+                        >
                           {border}
                         </span>
                       );
