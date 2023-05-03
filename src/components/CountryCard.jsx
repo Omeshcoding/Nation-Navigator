@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const CountryCard = ({
-  id,
-  countryName,
-  continents,
-  image,
-  alt,
-  capital,
-  population,
-}) => {
+const CountryCard = (country) => {
+  const image = country.flags.png;
+  const countryName = country.name.common;
+  const alt = country.flags.alt;
+  const population = country.population;
+  const region = country.region;
+  const capital = country.capital;
+  const id = country.cca3;
+  const continents = country.region;
+  // console.log(image, countryName, alt, population, region, capital, id);
   return (
+    // <h1>come on</h1>
     <div className="flex flex-row flex-wrap justify-center items-center mx-4 p-8 gap-20 ">
       <Link
         to={`/countrydetails/${id}`}

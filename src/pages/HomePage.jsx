@@ -59,73 +59,16 @@ const HomePage = () => {
         {filterstore.length !== 0
           ? filterstore?.map((country) => {
               const id = country.cca3;
-              const image = country.flags.png;
-              const countryName = country.name.common;
-              const alt = country.flags.alt;
-              const population = country.population;
-              const region = country.region;
-              const capital = country.capital;
-
-              return (
-                <CountryCard
-                  key={id}
-                  id={id}
-                  countryName={countryName}
-                  image={image}
-                  alt={alt}
-                  population={population}
-                  region={region}
-                  capital={capital}
-                  {...country}
-                />
-              );
+              return <CountryCard key={id} {...country} />;
             })
           : value
           ? countryData.map((country) => {
               const id = country.cca3;
-              const image = country.flags.png;
-              const countryName = country.name.common;
-              const alt = country.flags.alt;
-              const population = country.population;
-              const region = country.region;
-              const capital = country.capital;
-
-              return (
-                <CountryCard
-                  key={id}
-                  id={id}
-                  countryName={countryName}
-                  image={image}
-                  alt={alt}
-                  population={population}
-                  region={region}
-                  capital={capital}
-                  {...country}
-                />
-              );
+              return <CountryCard key={id} {...country} />;
             })
           : countries.map((country) => {
               const id = country.cca3;
-              const image = country.flags.png;
-              const countryName = country.name.common;
-              const alt = country.flags.alt;
-              const population = country.population;
-              const region = country.region;
-              const capital = country.capital;
-
-              return (
-                <CountryCard
-                  key={id}
-                  id={id}
-                  countryName={countryName}
-                  image={image}
-                  alt={alt}
-                  population={population}
-                  region={region}
-                  capital={capital}
-                  {...country}
-                />
-              );
+              return <CountryCard key={id} {...country} />;
             })}
       </div>
     </div>

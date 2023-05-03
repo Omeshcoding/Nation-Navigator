@@ -13,7 +13,6 @@ const CountryDetails = () => {
       .get(`https://restcountries.com/v3.1/alpha/${id}`)
       .then((response) => setCountry(response.data));
   }, []);
-  // console.log(country.name);
   return (
     <article className="mx-4 lg:ml-14 h-[100%] lg:h-[90vh] ">
       <Link
@@ -31,11 +30,10 @@ const CountryDetails = () => {
         const region = singleCountry.region;
         const capital = singleCountry.capital;
 
-        const nativeName = singleCountry.name.nativeName.eng;
+        const nativeName = singleCountry.name.nativeName;
 
         const subRegion = singleCountry.subregion;
         const borders = singleCountry.borders;
-
         return (
           <div
             key={id}
